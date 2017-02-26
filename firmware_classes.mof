@@ -1,0 +1,147 @@
+[ SMS_Report (TRUE),
+  SMS_Group_Name ("Firmware Settings - Dell"),
+  SMS_Class_ID ("MICROSOFT|DCIM_BIOSENUMERATION|1.0"),
+  Namespace ("root\\\\dcim\\\\sysman") ]
+class DCIM_BIOSEnumeration : SMS_Class_Template
+{
+    [ SMS_Report (TRUE), key ]
+    String     InstanceID;
+    [ SMS_Report (TRUE) ]
+    String     AttributeName;
+    [ SMS_Report (FALSE) ]
+    String     Caption;
+    [ SMS_Report (TRUE) ]
+    String     CurrentValue[];
+    [ SMS_Report (TRUE) ]
+    String     DefaultValue[];
+    [ SMS_Report (FALSE) ]
+    String     Description;
+    [ SMS_Report (FALSE) ]
+    String     ElementName;
+    [ SMS_Report (FALSE) ]
+    Boolean     IsOrderedList;
+    [ SMS_Report (TRUE) ]
+    Boolean     IsReadOnly;
+    [ SMS_Report (FALSE) ]
+    String     PendingValue[];
+    [ SMS_Report (TRUE) ]
+    String     PossibleValues[];
+    [ SMS_Report (TRUE) ]
+    String     PossibleValuesDescription[];
+};
+
+[ SMS_Report (TRUE),
+  SMS_Group_Name ("Firmware Settings - Dell Boot Order"),
+  SMS_Class_ID ("MICROSOFT|DCIM_BOOTSOURCESETTING|1.0"),
+  Namespace ("root\\\\dcim\\\\sysman") ]
+class DCIM_BootSourceSetting : SMS_Class_Template
+{
+    [ SMS_Report (TRUE), key ]
+    String     InstanceID;
+    [ SMS_Report (TRUE) ]
+    String     BIOSBootString;
+    [ SMS_Report (FALSE) ]
+    String     BootString;
+    [ SMS_Report (FALSE) ]
+    String     Caption;
+    [ SMS_Report (FALSE) ]
+    UInt16     ChangeableType;
+    [ SMS_Report (FALSE) ]
+    String     ConfigurationName;
+    [ SMS_Report (FALSE) ]
+    String     Description;
+    [ SMS_Report (TRUE) ]
+    String     ElementName;
+    [ SMS_Report (FALSE) ]
+    UInt16     FailThroughSupported;
+    [ SMS_Report (TRUE) ]
+    String     StructuredBootString;
+};
+
+[ SMS_Report (TRUE),
+  SMS_Group_Name ("Firmware Settings - HP"),
+  SMS_Class_ID ("MICROSOFT|HPBIOS_BIOSENUMERATION|1.0"),
+  Namespace ("root\\\\HP\\\\instrumentedbios") ]
+class HPBIOS_BIOSEnumeration : SMS_Class_Template
+{
+    [ SMS_Report (TRUE), key ]
+    String     InstanceName;
+    [ SMS_Report (FALSE) ]
+    Boolean     Active;
+    [ SMS_Report (TRUE) ]
+    String     CurrentValue;
+    [ SMS_Report (TRUE) ]
+    UInt32     DisplayInUI;
+    [ SMS_Report (TRUE) ]
+    UInt32     IsReadOnly;
+    [ SMS_Report (TRUE) ]
+    String     Name;
+    [ SMS_Report (FALSE) ]
+    String     Path;
+    [ SMS_Report (TRUE) ]
+    String     PossibleValues[];
+    [ SMS_Report (TRUE) ]
+    String     Prerequisites[];
+    [ SMS_Report (FALSE) ]
+    UInt32     PrerequisiteSize;
+    [ SMS_Report (TRUE) ]
+    UInt32     RequiresPhysicalPresence;
+    [ SMS_Report (FALSE) ]
+    UInt32     SecurityLevel;
+    [ SMS_Report (FALSE) ]
+    UInt32     Sequence;
+    [ SMS_Report (FALSE) ]
+    UInt32     Size;
+    [ SMS_Report (TRUE) ]
+    String     Value;
+};
+
+[ SMS_Report (TRUE),
+  SMS_Group_Name ("Firmware Settings - HP Boot Order"),
+  SMS_Class_ID ("MICROSOFT|HPBIOS_BIOSORDEREDLIST|1.0"),
+  Namespace ("root\\\\HP\\\\instrumentedbios") ]
+class HPBIOS_BIOSOrderedList : SMS_Class_Template
+{
+    [ SMS_Report (TRUE), key ]
+    String     InstanceName;
+    [ SMS_Report (FALSE) ]
+    Boolean     Active;
+    [ SMS_Report (FALSE) ]
+    UInt32     DisplayInUI;
+    [ SMS_Report (FALSE) ]
+    String     Elements[];
+    [ SMS_Report (FALSE) ]
+    UInt32     IsReadOnly;
+    [ SMS_Report (TRUE) ]
+    String     Name;
+    [ SMS_Report (FALSE) ]
+    String     Path;
+    [ SMS_Report (FALSE) ]
+    String     Prerequisites[];
+    [ SMS_Report (FALSE) ]
+    UInt32     PrerequisiteSize;
+    [ SMS_Report (FALSE) ]
+    UInt32     RequiresPhysicalPresence;
+    [ SMS_Report (FALSE) ]
+    UInt32     SecurityLevel;
+    [ SMS_Report (FALSE) ]
+    UInt32     Sequence;
+    [ SMS_Report (FALSE) ]
+    UInt32     Size;
+    [ SMS_Report (TRUE) ]
+    String     Value;
+};
+
+[ SMS_Report (TRUE),
+  SMS_Group_Name ("Firmware Settings - Lenovo"),
+  SMS_Class_ID ("MICROSOFT|LENOVO_BIOSSETTING|1.0"),
+  Namespace ("root\\\\wmi") ]
+class Lenovo_BiosSetting : SMS_Class_Template
+{
+    [ SMS_Report (TRUE), key ]
+    String     InstanceName;
+    [ SMS_Report (TRUE) ]
+    Boolean     Active;
+    [ SMS_Report (TRUE) ]
+    String     CurrentSetting;
+};
